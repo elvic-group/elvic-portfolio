@@ -1,0 +1,154 @@
+/*
+ * Header Improvements for Elvic Kongolo Website
+ * Improves spacing, alignment, and visual hierarchy
+ */
+
+/* Header container improvements */
+#header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  background-color: #fff !important;
+}
+
+/* Reduce excessive white space and improve layout */
+.header-display-desktop .header-inner.container--fluid,
+.header-inner.container--fluid {
+  max-width: 1200px !important;
+  padding: 12px 40px !important;
+}
+
+.header-display-desktop .header-title-nav-wrapper,
+.header-title-nav-wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 40px !important;
+}
+
+/* Logo styling */
+.header-display-desktop .header-title-logo img,
+.header-title-logo img {
+  max-height: 32px !important;
+  width: auto !important;
+}
+
+/* Navigation improvements */
+.header-display-desktop .header-nav,
+.header-nav {
+  flex: 0 0 auto !important;
+  margin-left: auto !important;
+}
+
+.header-display-desktop .header-nav-list,
+.header-nav-list {
+  display: flex !important;
+  gap: 24px !important;
+  align-items: center !important;
+  margin: 0 !important;
+}
+
+.header-display-desktop .header-nav-item,
+.header-nav-item {
+  margin: 0 !important;
+}
+
+.header-display-desktop .header-nav-item a,
+.header-nav-item a {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  padding: 8px 0 !important;
+  position: relative !important;
+  transition: all 0.2s ease !important;
+  display: inline-block !important;
+}
+
+/* Hover effect */
+.header-display-desktop .header-nav-item a:hover,
+.header-nav-item a:hover {
+  color: #666 !important;
+}
+
+/* Active page indicator - highlighted background */
+.header-display-desktop .header-nav-item--active a,
+.header-nav-item--active a {
+  background-color: #000 !important;
+  color: #fff !important;
+  padding: 8px 16px !important;
+  border-radius: 2px !important;
+}
+
+.header-display-desktop .header-nav-item--active a:hover,
+.header-nav-item--active a:hover {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .header-display-desktop .header-inner.container--fluid,
+  .header-inner.container--fluid {
+    max-width: 100% !important;
+    padding: 18px 30px !important;
+  }
+
+  .header-display-desktop .header-title-nav-wrapper,
+  .header-title-nav-wrapper {
+    gap: 40px !important;
+  }
+
+  .header-display-desktop .header-nav-list,
+  .header-nav-list {
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-display-desktop .header-inner.container--fluid,
+  .header-inner.container--fluid {
+    padding: 16px 20px !important;
+  }
+
+  .header-display-desktop .header-title-nav-wrapper,
+  .header-title-nav-wrapper {
+    gap: 20px !important;
+  }
+
+  .header-display-desktop .header-nav-list,
+  .header-nav-list {
+    gap: 16px !important;
+  }
+
+  .header-display-desktop .header-nav-item a,
+  .header-nav-item a {
+    font-size: 12px !important;
+  }
+
+  .header-display-desktop .header-nav-item--active a,
+  .header-nav-item--active a {
+    padding: 6px 12px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-display-desktop .header-title-nav-wrapper,
+  .header-title-nav-wrapper {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  .header-display-desktop .header-nav,
+  .header-nav {
+    width: 100% !important;
+  }
+
+  .header-display-desktop .header-nav-list,
+  .header-nav-list {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+}
+
