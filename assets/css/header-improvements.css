@@ -73,7 +73,9 @@
 
 /* Active page indicator - highlighted background */
 .header-display-desktop .header-nav-item--active a,
-.header-nav-item--active a {
+.header-nav-item--active a,
+.header-nav-item.header-nav-item--active a,
+.header-nav-item.header-nav-item--collection.header-nav-item--active a {
   background-color: #000 !important;
   color: #fff !important;
   padding: 8px 16px !important;
@@ -81,7 +83,9 @@
 }
 
 .header-display-desktop .header-nav-item--active a:hover,
-.header-nav-item--active a:hover {
+.header-nav-item--active a:hover,
+.header-nav-item.header-nav-item--active a:hover,
+.header-nav-item.header-nav-item--collection.header-nav-item--active a:hover {
   background-color: #333 !important;
   color: #fff !important;
 }
@@ -150,5 +154,19 @@
     width: 100% !important;
     justify-content: space-between !important;
   }
+}
+
+/* Force all navigation items to be visible */
+.header-nav-item {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure About link is always visible on all pages including homepage */
+.header-nav-item--homepage + .header-nav-item {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
