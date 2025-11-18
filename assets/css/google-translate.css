@@ -43,7 +43,51 @@ body {
   line-height: 1.5 !important;
 }
 
-/* Simple Layout Styling - Matches website design */
+/* Horizontal Layout Styling - Clean dropdown select */
+.goog-te-combo {
+  font-family: inherit !important;
+  font-size: 13px !important;
+  padding: 8px 30px 8px 12px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  color: #000 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s ease !important;
+  font-weight: 400 !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 8px center !important;
+  background-size: 16px !important;
+  min-width: 150px !important;
+}
+
+.goog-te-combo:hover {
+  opacity: 0.7 !important;
+}
+
+.goog-te-combo:focus {
+  opacity: 1 !important;
+  outline: none !important;
+}
+
+/* Style the select options */
+.goog-te-combo option {
+  font-family: inherit !important;
+  font-size: 13px !important;
+  padding: 10px !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Simple Layout Styling - Fallback */
 .goog-te-gadget-simple {
   background-color: transparent !important;
   border: none !important;

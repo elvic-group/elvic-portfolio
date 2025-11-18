@@ -1903,37 +1903,10 @@ startups focusing on tech-driven growth and scaling strategies." />
       new google.translate.TranslateElement({
         pageLanguage: 'en',
         includedLanguages: 'en,no,fr,de,so,sw,zh-CN',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
         autoDisplay: false
       }, 'google_translate_element');
-
-      // Fix dropdown width after it loads
-      setTimeout(function() {
-        var iframe = document.querySelector('.goog-te-menu-frame');
-        if (iframe) {
-          iframe.style.minWidth = '280px';
-          iframe.style.width = '280px';
-        }
-      }, 500);
     }
-
-    // Additional fix when dropdown is clicked
-    document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        var widget = document.querySelector('#google_translate_element');
-        if (widget) {
-          widget.addEventListener('click', function() {
-            setTimeout(function() {
-              var frames = document.querySelectorAll('.goog-te-menu-frame');
-              frames.forEach(function(frame) {
-                frame.style.minWidth = '280px';
-                frame.style.width = '280px';
-              });
-            }, 100);
-          });
-        }
-      }, 1000);
-    });
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
