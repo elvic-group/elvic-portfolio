@@ -10,7 +10,7 @@
   vertical-align: middle;
 }
 
-/* Hide "Powered by Google" text and logo */
+/* Hide ALL Google branding text and logos */
 .goog-logo-link {
   display: none !important;
 }
@@ -35,11 +35,33 @@
 }
 
 #google_translate_element .goog-te-gadget-simple span {
-  color: transparent !important;
+  display: none !important;
 }
 
 #google_translate_element .goog-te-gadget-simple img {
   display: none !important;
+}
+
+/* Aggressively hide all text except the select dropdown */
+.goog-te-gadget-simple * {
+  font-size: 0 !important;
+  color: transparent !important;
+}
+
+.goog-te-gadget-simple .goog-te-combo {
+  font-size: 13px !important;
+  color: #000 !important;
+}
+
+/* Hide "Powered by" in all languages */
+.goog-te-gadget span,
+.goog-te-gadget a {
+  display: none !important;
+}
+
+/* Only show the dropdown select */
+.goog-te-gadget select {
+  display: inline-block !important;
 }
 
 /* Hide Google Translate top banner */
@@ -76,6 +98,34 @@ iframe.skiptranslate {
 
 #google_translate_element .skiptranslate > div {
   display: inline-block !important;
+}
+
+/* Hide all text nodes in the widget container */
+#google_translate_element {
+  font-size: 0 !important;
+}
+
+#google_translate_element * {
+  font-size: 0 !important;
+}
+
+/* Only show text in the select dropdown */
+#google_translate_element select,
+#google_translate_element select *,
+#google_translate_element option,
+#google_translate_element option * {
+  font-size: 13px !important;
+}
+
+/* Force hide any text that's not in the select */
+.goog-te-gadget-simple > span > a,
+.goog-te-gadget-simple > span > span {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
 }
 
 /* Prevent widget from being translated */
