@@ -117,7 +117,7 @@
 
   /* Mobile header should align with content */
   .header-display-mobile .header-inner.container--fluid {
-    padding: 16px 40px !important;
+    padding: 16px 28px !important;
   }
 
   .header-display-desktop .header-title-nav-wrapper,
