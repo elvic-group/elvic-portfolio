@@ -116,8 +116,10 @@
   }
 
   /* Mobile header should align with content */
-  .header-display-mobile .header-inner.container--fluid {
-    padding: 16px 28px !important;
+  .header-display-mobile .header-inner.container--fluid,
+  #header .header-display-mobile .header-inner.container--fluid {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
   }
 
   .header-display-desktop .header-title-nav-wrapper,
