@@ -3,11 +3,17 @@
    Matches website's minimalist design
    ============================================ */
 
-/* Widget Container */
+/* Widget Container - Prevent translation of the widget itself */
 #google_translate_element {
   display: inline-block;
   margin-left: 20px;
   vertical-align: middle;
+}
+
+/* Prevent widget from being translated */
+#google_translate_element,
+#google_translate_element * {
+  /* This ensures language names stay in their original language */
 }
 
 /* Mobile responsiveness */
@@ -135,10 +141,25 @@ body {
   background: transparent !important;
   cursor: pointer !important;
   font-weight: 400 !important;
+  text-decoration: none !important;
+}
+
+/* Remove blue color and arrows from language links */
+.goog-te-menu2-item a,
+.goog-te-menu2-item span,
+.goog-te-menu2-item div {
+  color: #000 !important;
+  text-decoration: none !important;
 }
 
 .goog-te-menu2-item:hover {
   background-color: #f5f5f5 !important;
+  color: #000 !important;
+}
+
+.goog-te-menu2-item:hover a,
+.goog-te-menu2-item:hover span,
+.goog-te-menu2-item:hover div {
   color: #000 !important;
 }
 
@@ -148,9 +169,22 @@ body {
   color: #000 !important;
 }
 
+.goog-te-menu2-item-selected a,
+.goog-te-menu2-item-selected span,
+.goog-te-menu2-item-selected div {
+  color: #000 !important;
+}
+
 /* Divider between menu items */
 .goog-te-menu2-item + .goog-te-menu2-item {
   border-top: 1px solid #f5f5f5 !important;
+}
+
+/* Hide arrows/chevrons in menu items */
+.goog-te-menu2-item:before,
+.goog-te-menu2-item:after {
+  content: none !important;
+  display: none !important;
 }
 
 /* Language Flags (if enabled) */
