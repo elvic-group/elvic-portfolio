@@ -115,6 +115,11 @@
     padding: 16px 20px !important;
   }
 
+  /* Mobile header should align with content */
+  .header-display-mobile .header-inner.container--fluid {
+    padding: 16px 40px !important;
+  }
+
   .header-display-desktop .header-title-nav-wrapper,
   .header-title-nav-wrapper {
     gap: 20px !important;
