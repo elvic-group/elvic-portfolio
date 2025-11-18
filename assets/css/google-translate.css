@@ -1,5 +1,6 @@
 /* ============================================
    Google Translate Widget Styling
+   Matches website's minimalist design
    ============================================ */
 
 /* Widget Container */
@@ -28,47 +29,54 @@ body {
   position: static !important;
 }
 
-/* Main Gadget Styling */
+/* Main Gadget Styling - Clean & Minimal */
 .goog-te-gadget {
   font-family: inherit !important;
-  font-size: 14px !important;
-  color: #333 !important;
+  font-size: 13px !important;
+  color: #000 !important;
+  line-height: 1.5 !important;
 }
 
-/* Simple Layout Styling */
+/* Simple Layout Styling - Matches website design */
 .goog-te-gadget-simple {
-  background-color: #ffffff !important;
-  border: 1px solid #ddd !important;
-  padding: 8px 12px !important;
-  border-radius: 4px !important;
-  font-size: 14px !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: 13px !important;
   display: inline-block !important;
   cursor: pointer !important;
-  transition: all 0.3s ease !important;
+  transition: opacity 0.2s ease !important;
+  font-family: inherit !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
 }
 
 .goog-te-gadget-simple:hover {
-  border-color: #999 !important;
-  background-color: #f9f9f9 !important;
+  opacity: 0.7 !important;
 }
 
-/* Menu Value (Selected Language Text) */
+/* Menu Value (Selected Language Text) - Clean text style */
 .goog-te-gadget-simple .goog-te-menu-value {
-  color: #333 !important;
+  color: #000 !important;
+  font-weight: 400 !important;
 }
 
 .goog-te-gadget-simple .goog-te-menu-value span {
-  color: #333 !important;
-  font-weight: 500 !important;
+  color: #000 !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.05em !important;
 }
 
 .goog-te-gadget-simple .goog-te-menu-value span:hover {
   color: #000 !important;
+  opacity: 0.7 !important;
 }
 
-/* Dropdown Arrow */
+/* Dropdown Arrow - Subtle styling */
 .goog-te-gadget-simple .goog-te-menu-value span:first-child {
-  margin-right: 5px !important;
+  margin-right: 3px !important;
 }
 
 /* Hide "Powered by" text */
@@ -98,33 +106,38 @@ body {
   border: none !important;
 }
 
-/* Dropdown Menu Styling */
+/* Dropdown Menu Styling - Clean & Modern */
 .goog-te-menu-frame {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-  border-radius: 4px !important;
-  border: 1px solid #ddd !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 0 !important;
+  border: 1px solid #e5e5e5 !important;
+  margin-top: 8px !important;
 }
 
-/* Menu Items */
+/* Menu Items - Minimal design */
 .goog-te-menu2 {
   border: none !important;
   background-color: #ffffff !important;
+  padding: 8px 0 !important;
 }
 
 .goog-te-menu2-item {
-  padding: 8px 16px !important;
-  font-size: 14px !important;
-  color: #333 !important;
-  transition: background-color 0.2s ease !important;
+  padding: 10px 20px !important;
+  font-size: 13px !important;
+  color: #000 !important;
+  transition: background-color 0.15s ease !important;
+  font-family: inherit !important;
+  letter-spacing: 0.03em !important;
+  border: none !important;
 }
 
 .goog-te-menu2-item:hover {
-  background-color: #f5f5f5 !important;
+  background-color: #f8f8f8 !important;
 }
 
 .goog-te-menu2-item-selected {
-  background-color: #e8f4f8 !important;
-  font-weight: 500 !important;
+  background-color: #f0f0f0 !important;
+  font-weight: 400 !important;
 }
 
 /* Language Flags (if enabled) */
@@ -135,13 +148,13 @@ body {
 /* Mobile Menu Adjustments */
 @media (max-width: 640px) {
   .goog-te-gadget-simple {
-    padding: 6px 10px !important;
-    font-size: 13px !important;
+    padding: 0 !important;
+    font-size: 12px !important;
   }
-  
+
   .goog-te-menu2-item {
-    padding: 10px 14px !important;
-    font-size: 13px !important;
+    padding: 12px 18px !important;
+    font-size: 12px !important;
   }
 }
 
@@ -156,27 +169,40 @@ body {
   align-items: center;
 }
 
-/* Dark mode support (if needed) */
-@media (prefers-color-scheme: dark) {
-  .goog-te-gadget-simple {
-    background-color: #2a2a2a !important;
-    border-color: #444 !important;
-  }
-  
-  .goog-te-gadget-simple .goog-te-menu-value span {
-    color: #fff !important;
-  }
-  
-  .goog-te-menu2 {
-    background-color: #2a2a2a !important;
-  }
-  
-  .goog-te-menu2-item {
-    color: #fff !important;
-  }
-  
-  .goog-te-menu2-item:hover {
-    background-color: #3a3a3a !important;
-  }
+/* Additional refinements for clean look */
+.goog-te-combo {
+  font-family: inherit !important;
+  font-size: 13px !important;
+  padding: 6px 10px !important;
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 0 !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  letter-spacing: 0.03em !important;
+  cursor: pointer !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.goog-te-combo:hover {
+  border-color: #ccc !important;
+}
+
+.goog-te-combo:focus {
+  outline: none !important;
+  border-color: #999 !important;
+}
+
+/* Remove Google Translate watermark */
+.goog-te-gadget .goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* Style the language text to match nav links */
+.goog-te-menu-value span:first-child {
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
 }
 
