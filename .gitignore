@@ -106,3 +106,4 @@ build/
 *.rar
 *.7z
 
+.vercel
