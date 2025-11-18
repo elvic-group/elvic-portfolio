@@ -2022,11 +2022,33 @@ startups focusing on tech-driven growth and scaling strategies." />
         autoDisplay: false
       }, 'google_translate_element');
 
-      // Change "Velg språk" to "Select Language"
+      // Change "Velg språk" to "Select Language" and restore saved language
       setTimeout(function() {
         var select = document.querySelector('.goog-te-combo');
-        if (select && select.options[0]) {
-          select.options[0].text = 'Select Language';
+        if (select) {
+          // Change first option text
+          if (select.options[0]) {
+            select.options[0].text = 'Select Language';
+          }
+
+          // Restore saved language
+          var savedLang = localStorage.getItem('googtrans');
+          if (savedLang) {
+            var langCode = savedLang.split('/')[2];
+            if (langCode) {
+              select.value = langCode;
+              select.dispatchEvent(new Event('change'));
+            }
+          }
+
+          // Save language when changed
+          select.addEventListener('change', function() {
+            var lang = this.value;
+            if (lang) {
+              localStorage.setItem('googtrans', '/en/' + lang);
+              localStorage.setItem('googtrans', '/en/' + lang);
+            }
+          });
         }
       }, 500);
     }
