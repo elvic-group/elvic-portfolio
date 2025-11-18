@@ -119,6 +119,14 @@ body {
   border: 1px solid #e0e0e0 !important;
   margin-top: 10px !important;
   background: #fff !important;
+  min-width: 250px !important;
+  width: auto !important;
+}
+
+/* Fix iframe container width */
+.goog-te-menu-frame.skiptranslate {
+  min-width: 250px !important;
+  width: auto !important;
 }
 
 /* Menu Items - Minimal design matching website */
@@ -128,6 +136,9 @@ body {
   padding: 4px 0 !important;
   max-height: 400px !important;
   overflow-y: auto !important;
+  min-width: 250px !important;
+  width: auto !important;
+  overflow-x: visible !important;
 }
 
 .goog-te-menu2-item {
@@ -142,6 +153,11 @@ body {
   cursor: pointer !important;
   font-weight: 400 !important;
   text-decoration: none !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  width: 100% !important;
+  display: block !important;
 }
 
 /* Remove blue color and arrows from language links */
@@ -150,6 +166,8 @@ body {
 .goog-te-menu2-item div {
   color: #000 !important;
   text-decoration: none !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
 }
 
 .goog-te-menu2-item:hover {
@@ -185,6 +203,28 @@ body {
 .goog-te-menu2-item:after {
   content: none !important;
   display: none !important;
+}
+
+/* Ensure table doesn't cut off content */
+.goog-te-menu2 table {
+  width: 100% !important;
+  table-layout: auto !important;
+}
+
+.goog-te-menu2 td {
+  white-space: nowrap !important;
+  overflow: visible !important;
+  padding: 0 !important;
+}
+
+/* Fix for the menu container */
+.goog-te-menu-frame > div {
+  overflow: visible !important;
+}
+
+body .goog-te-menu2 {
+  overflow-x: visible !important;
+  overflow-y: auto !important;
 }
 
 /* Language Flags (if enabled) */
