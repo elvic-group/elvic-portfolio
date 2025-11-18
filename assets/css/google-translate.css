@@ -112,21 +112,28 @@ body {
   border: none !important;
 }
 
-/* Dropdown Menu Styling - Clean & Modern */
+/* Dropdown Menu Styling - Force proper width */
 .goog-te-menu-frame {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
   border-radius: 0 !important;
   border: 1px solid #e0e0e0 !important;
   margin-top: 10px !important;
   background: #fff !important;
-  min-width: 250px !important;
-  width: auto !important;
+  min-width: 280px !important;
+  max-width: 400px !important;
 }
 
 /* Fix iframe container width */
 .goog-te-menu-frame.skiptranslate {
-  min-width: 250px !important;
-  width: auto !important;
+  min-width: 280px !important;
+  max-width: 400px !important;
+}
+
+/* Force iframe to be wider */
+.goog-te-menu-frame iframe {
+  min-width: 280px !important;
+  max-width: 400px !important;
+  width: 280px !important;
 }
 
 /* Menu Items - Minimal design matching website */
@@ -136,9 +143,9 @@ body {
   padding: 4px 0 !important;
   max-height: 400px !important;
   overflow-y: auto !important;
-  min-width: 250px !important;
-  width: auto !important;
-  overflow-x: visible !important;
+  min-width: 280px !important;
+  max-width: 400px !important;
+  width: 280px !important;
 }
 
 .goog-te-menu2-item {
@@ -205,26 +212,52 @@ body {
   display: none !important;
 }
 
-/* Ensure table doesn't cut off content */
+/* Force table to be full width */
 .goog-te-menu2 table {
-  width: 100% !important;
-  table-layout: auto !important;
+  width: 280px !important;
+  min-width: 280px !important;
+  table-layout: fixed !important;
+}
+
+.goog-te-menu2 tbody {
+  width: 280px !important;
+  min-width: 280px !important;
 }
 
 .goog-te-menu2 td {
   white-space: nowrap !important;
   overflow: visible !important;
   padding: 0 !important;
+  width: 280px !important;
+  min-width: 280px !important;
 }
 
 /* Fix for the menu container */
 .goog-te-menu-frame > div {
   overflow: visible !important;
+  min-width: 280px !important;
+  width: 280px !important;
 }
 
 body .goog-te-menu2 {
   overflow-x: visible !important;
   overflow-y: auto !important;
+  min-width: 280px !important;
+  width: 280px !important;
+}
+
+/* Additional iframe fixes */
+iframe.goog-te-menu-frame {
+  min-width: 280px !important;
+  width: 280px !important;
+}
+
+/* Force body inside iframe to be wider */
+.goog-te-menu2-item-selected .text,
+.goog-te-menu2-item .text {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: 200px !important;
 }
 
 /* Language Flags (if enabled) */
