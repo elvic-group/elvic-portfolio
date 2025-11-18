@@ -2240,7 +2240,25 @@ website.components.form
         layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
         autoDisplay: false
       }, 'google_translate_element');
+
+      // Change "Velg språk" to "Select Language"
+      setTimeout(function() {
+        var select = document.querySelector('.goog-te-combo');
+        if (select && select.options[0]) {
+          select.options[0].text = 'Select Language';
+        }
+      }, 500);
     }
+
+    // Also fix it when the page loads
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var select = document.querySelector('.goog-te-combo');
+        if (select && select.options[0]) {
+          select.options[0].text = 'Select Language';
+        }
+      }, 1000);
+    });
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
