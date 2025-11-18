@@ -108,36 +108,49 @@ body {
 
 /* Dropdown Menu Styling - Clean & Modern */
 .goog-te-menu-frame {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
   border-radius: 0 !important;
-  border: 1px solid #e5e5e5 !important;
-  margin-top: 8px !important;
+  border: 1px solid #e0e0e0 !important;
+  margin-top: 10px !important;
+  background: #fff !important;
 }
 
-/* Menu Items - Minimal design */
+/* Menu Items - Minimal design matching website */
 .goog-te-menu2 {
   border: none !important;
   background-color: #ffffff !important;
-  padding: 8px 0 !important;
+  padding: 4px 0 !important;
+  max-height: 400px !important;
+  overflow-y: auto !important;
 }
 
 .goog-te-menu2-item {
-  padding: 10px 20px !important;
+  padding: 12px 24px !important;
   font-size: 13px !important;
   color: #000 !important;
-  transition: background-color 0.15s ease !important;
+  transition: all 0.2s ease !important;
   font-family: inherit !important;
-  letter-spacing: 0.03em !important;
+  letter-spacing: 0.02em !important;
   border: none !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  font-weight: 400 !important;
 }
 
 .goog-te-menu2-item:hover {
-  background-color: #f8f8f8 !important;
+  background-color: #f5f5f5 !important;
+  color: #000 !important;
 }
 
 .goog-te-menu2-item-selected {
-  background-color: #f0f0f0 !important;
-  font-weight: 400 !important;
+  background-color: #ebebeb !important;
+  font-weight: 500 !important;
+  color: #000 !important;
+}
+
+/* Divider between menu items */
+.goog-te-menu2-item + .goog-te-menu2-item {
+  border-top: 1px solid #f5f5f5 !important;
 }
 
 /* Language Flags (if enabled) */
